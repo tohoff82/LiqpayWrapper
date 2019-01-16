@@ -2,7 +2,7 @@
 
 namespace LiqpayWrapper
 {
-    public class LiqpayClient
+    public abstract class LiqpayClient : ILiqpayClient
     {
     }
 }
