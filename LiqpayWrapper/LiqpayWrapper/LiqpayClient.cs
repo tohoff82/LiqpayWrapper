@@ -63,7 +63,7 @@ namespace LiqpayWrapper
             return response.Data;
         }
 
-        private async Task<string> ToPackAsync(BaseRequest model) => await model.ToJson().ToBase64();
+        private async Task<string> ToPackAsync(BaseRequest model) => await model.ToJsonAsync().ToBase64Async();
 
         private async Task<string> CreateSignatureAsync(string postData, string secret)
         {
