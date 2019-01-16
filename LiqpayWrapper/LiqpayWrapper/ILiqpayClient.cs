@@ -1,14 +1,15 @@
-﻿using LiqpayWrapper.Data.Requests;
+﻿using System.Threading.Tasks;
+using LiqpayWrapper.Data.Requests;
 using LiqpayWrapper.Data.Responses;
 
 namespace LiqpayWrapper
 {
     interface ILiqpayClient
     {
-        StatusResponse GetStatus(StatusRequest model);
+        Task<StatusResponse> GetStatusAsync(StatusRequest model);
 
-        OtpVerifyResponse OtpVerify(OtpVerifyRequest model);
+        Task<OtpVerifyResponse> OtpVerifyAsync(OtpVerifyRequest model);
 
-        Verify3DsResponse Verify3Ds(Verify3DsRequest model);
+        Task<Verify3DsResponse> Verify3DsAsync(Verify3DsRequest model);
     }
 }
