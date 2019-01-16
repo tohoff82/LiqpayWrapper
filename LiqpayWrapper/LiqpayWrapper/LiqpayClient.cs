@@ -79,20 +79,13 @@ namespace LiqpayWrapper
 
         private async Task<IRestResponse<T>> HttpPostAsync<T>(string url, object data, int timeout) where T : new()
         {
-            var request = CreateRequest(Method.POST, timeout);
             var client = new RestClient(url);
-            request.AddObject(data);
-            return await Task.Run(() => client.Execute<T>(request));
-        }
-
-        private static RestRequest CreateRequest(Method method, int timeout = 30000)
-        {
-            return new RestRequest
+            return await Task.Run(() => client.Execute<T>(new RestRequest
             {
-                Method = method,
+                Method = Method.POST,
                 RequestFormat = DataFormat.Json,
                 Timeout = timeout
-            };
+            }.AddObject(data)));
         }
     }
 }
