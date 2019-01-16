@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using LiqpayWrapper.Data.Requests;
 using LiqpayWrapper.Data.Requests.Acquiring;
 using LiqpayWrapper.Data.Responses.Acquiring;
@@ -8,22 +9,22 @@ namespace LiqpayWrapper.Acquiring
 {
     interface IAcquirerClient : ILiqpayClient
     {
-        HoldResponse Hold(HoldRequest model);
+        Task<HoldResponse> HoldAsync(HoldRequest model);
 
-        HoldCompletionResponse HoldCompletion(HoldCompletionRequest model);
+        Task<HoldCompletionResponse> HoldCompletionAsync(HoldCompletionRequest model);
 
-        PayResponse Pay(PayRequest model);
+        Task<PayResponse> PayAsync(PayRequest model);
 
-        SubscribeResponse Subscribe(SubscribeRequest model);
+        Task<SubscribeResponse> SubscribeAsync(SubscribeRequest model);
 
-        UnsubscribeResponse Unsubscribe(UnsubscribeRequest model);
+        Task<UnsubscribeResponse> UnsubscribeAsync(UnsubscribeRequest model);
 
-        MpiResponse Mpi(MpiRequest model);
+        Task<MpiResponse> MpiAsync(MpiRequest model);
 
-        AcquirerResponse Refund(RefundRequest model);
+        Task<AcquirerResponse> RefundAsync(RefundRequest model);
 
-        ReportResponse Reports(DateTime dateFrom, DateTime dateTo);
+        Task<ReportResponse> ReportsAsync(DateTime dateFrom, DateTime dateTo);
 
-        AuthResponse Auth(AuthRequest model);
+        Task<AuthResponse> AuthAsync(AuthRequest model);
     }
 }
