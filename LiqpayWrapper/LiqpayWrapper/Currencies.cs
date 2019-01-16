@@ -1,4 +1,4 @@
-﻿namespace LiqpayWrapper.Data
+﻿namespace LiqpayWrapper
 {
     class Currencies
     {
