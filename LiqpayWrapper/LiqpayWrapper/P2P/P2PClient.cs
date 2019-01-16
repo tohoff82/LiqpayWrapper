@@ -11,13 +11,13 @@ namespace LiqpayWrapper.P2P
         public async Task<P2PResponse> P2P(P2PRequest model)
         {
             model.Action = "p2p";
-            return await Task.Run(() => Query<P2PResponse>(model));
+            return await Query<P2PResponse>(model);
         }
 
         public async Task<P2PCreditResponse> P2PCredit(P2PCreditRequest model)
         {
             model.Action = "p2pcredit";
-            return await Task.Run(() => Query<P2PCreditResponse>(model));
+            return await Query<P2PCreditResponse>(model);
         }
     }
 }
