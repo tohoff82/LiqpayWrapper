@@ -12,8 +12,5 @@ namespace LiqpayWrapper.Data.Requests
 
         [JsonProperty("action")]
         public string Action { get; set; }
-
-        [JsonIgnore]
-        public string PrivateKey { get; set; }
     }
 }
