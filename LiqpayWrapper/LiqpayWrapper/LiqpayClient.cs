@@ -73,8 +73,7 @@ namespace LiqpayWrapper
                 byte[] sha1Res = sha1.ComputeHash(Encoding.UTF8.GetBytes(sb.ToString()));
 
                 return await Task.Run(() => Convert.ToBase64String(sha1Res));
-            }
-                
+            }                
         }
 
         private async Task<IRestResponse<T>> HttpPostAsync<T>(string url, object data, int timeout) where T : new()
