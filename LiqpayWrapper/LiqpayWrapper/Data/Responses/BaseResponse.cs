@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace LiqpayWrapper.Data
+namespace LiqpayWrapper.Data.Responses
 {
     public abstract class BaseResponse
     {
