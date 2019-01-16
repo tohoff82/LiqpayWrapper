@@ -6,7 +6,10 @@
 
   <ItemGroup>
     <Folder Include="Data\Requests\" />
-    <Folder Include="Data\Responses\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
   </ItemGroup>
 
 </Project>
