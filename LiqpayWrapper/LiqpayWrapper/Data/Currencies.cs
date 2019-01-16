@@ -1,6 +1,6 @@
-﻿namespace LiqpayWrapper
+﻿namespace LiqpayWrapper.Data
 {
-    class Currencies
+    public class Currencies
     {
         public enum Currency
         {
