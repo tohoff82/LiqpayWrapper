@@ -6,8 +6,8 @@ namespace LiqpayWrapper.P2P
 {
     interface IP2PClient : ILiqpayClient
     {
-        Task<P2PResponse> P2P(P2PRequest model);
+        Task<P2PResponse> P2PAsync(P2PRequest model);
 
-        Task<P2PCreditResponse> P2PCredit(P2PCreditRequest model);
+        Task<P2PCreditResponse> P2PCreditAsync(P2PCreditRequest model);
     }
 }
